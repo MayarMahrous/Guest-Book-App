@@ -42,18 +42,18 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     │   ├── config.js # This is where you set the base URL of your APIs.
     │   ├── guestBookAPIs.js # A JavaScript API for the backend. Instructions for the methods are below..
     │   ├── user.js # This holds data of the logged in user.
-	│	└── servicesEndpoint.js # This contains url of each API service in your app.
+    │	└── servicesEndpoint.js # This contains url of each API service in your app.
     ├── router 
     │   └── config.js # This holds all the routes of your application.
     ├── views 
     │   ├── Login.vue # This contains the template and script of login form.
     │   ├── Register.vue # This contains the template and script of register form.
-	│	└── Home.vue # This contains the template and script of home page that contains messages functionality.
+    │	└── Home.vue # This contains the template and script of home page that contains messages functionality.
     ├── components 
         ├── Comments.vue # This contains comment component of each message.
         ├── Header.vue # This contains header component that is shown in login form.
-	 	├── MessageContainer.vue # This is the message component that exists in home page.
-		└── MessageModal.js # This is a modal where the user can create new message.
+	├── MessageContainer.vue # This is the message component that exists in home page.
+	└── MessageModal.js # This is a modal where the user can create new message.
 	
 ```
 
