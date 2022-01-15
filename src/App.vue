@@ -29,14 +29,14 @@ export default {
   },
   methods: {
     getAllMessages() {
-      guestBookAPI.getMessages().then(this.getAllMessagesSuccess.bind(this));
+      guestBookAPI.getMessages().then(this.getAllMessagesSuccess);
     },
     getAllMessagesSuccess(res) {
       console.log(res);
       this.messages = res;
     },
     getAllUsers() {
-      guestBookAPI.getUsers().then(this.getAllUsersSuccess.bind(this));
+      guestBookAPI.getUsers().then(this.getAllUsersSuccess);
     },
     getAllUsersSuccess(res) {
       console.log(res);
