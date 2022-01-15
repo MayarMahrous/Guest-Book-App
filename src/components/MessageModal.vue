@@ -43,10 +43,9 @@ export default {
       if (this.newMessage) {
         guestBookAPI
           .addMessage(this.getMessageBody())
-          .then(this.getMessageSuccess.bind(this));
+          .then(this.getMessageSuccess);
         //As the API doesn't work correctly, I'll add the new Message to userMsgs Array that is shown in Home.vue
         // this.publishMessage(this.newMessage);
-        this.newMessage = null;
       }
     },
     getMessageBody() {
@@ -62,7 +61,7 @@ export default {
       this.messageData = res;
       guestBookAPI
         .addUserMessage(this.getUserMessageBody())
-        .then(this.addUserMessageSuccess.bind(this));
+        .then(this.addUserMessageSuccess);
     },
     getUserMessageBody() {
       return {
@@ -75,6 +74,8 @@ export default {
       console.log(res);
       //As the API doesn't work correctly, I'll add the new Message to userMsgs Array that is shown in Home.vue
       this.publishMessage(this.messageData.description);
+      //clear message caching
+      this.newMessage = null;
     },
   },
 };

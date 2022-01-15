@@ -53,7 +53,7 @@ export default {
     };
   },
   created() {
-    guestBookAPI.getUserMessages().then(this.getUsersMessages.bind(this))
+    guestBookAPI.getUserMessages().then(this.getUsersMessages)
   },
   methods: {
     getUsersMessages(msgs) {

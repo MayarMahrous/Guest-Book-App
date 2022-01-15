@@ -54,6 +54,7 @@ export default {
   created() {
     if (paths[paths.length - 2] == "/register") {
       let user = userInfo();
+      //login automatically when user navigates from the registration page
       if (user) {
         this.user.username = user.username;
         this.user.password = user.password;
@@ -67,9 +68,9 @@ export default {
   methods: {
     login() {
       guestBookAPI
-        .login(this.getLoginBody.bind(this)())
-        .then(this.loginSuccess.bind(this))
-        .catch(this.requestFail.bind(this));
+        .login(this.getLoginBody())
+        .then(this.loginSuccess)
+        .catch(this.requestFail);
     },
     getLoginBody() {
       return {
@@ -79,6 +80,7 @@ export default {
     },
     loginSuccess(res) {
       console.log(res);
+      //To access user's data in other pages
       localStorage.setItem("user", JSON.stringify(this.user));
       this.$router.push("/home");
     },

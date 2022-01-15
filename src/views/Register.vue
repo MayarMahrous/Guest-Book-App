@@ -74,15 +74,12 @@ export default {
       },
     };
   },
-  created() {
-    localStorage.removeItem("user");
-  },
   methods: {
     register() {
       guestBookAPI
-        .register(this.getRegisterBody.bind(this)())
-        .then(this.registerSuccess.bind(this))
-        .catch(this.requestFail.bind(this));
+        .register(this.getRegisterBody())
+        .then(this.registerSuccess)
+        .catch(this.requestFail);
     },
     getRegisterBody() {
       return {

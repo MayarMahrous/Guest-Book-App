@@ -76,10 +76,6 @@ export default {
   width: 50%;
 }
 .card-body {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; */
   padding: 10px;
   margin-top: 5px;
 }
